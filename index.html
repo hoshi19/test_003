@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>&lt;model-viewer&gt; template6-2</title>
+    <title>&lt;model-viewer&gt; template6-3</title>
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,7 +45,7 @@ button {
 	  <br>
 	      <model-viewer id="hako" src="test_hako_003.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" ar alt="A 3D model of a hako">
   <div class="controls">
-    <div><p>　　　　　　　箱カラー: <select id="variant"></select></div>
+    <div><p>　　　　　　　箱カラー: <select id="variant2"></select></div>
 	</model-viewer> 
 <script>
 const modelViewerVariants = document.querySelector("model-viewer#tobira");
@@ -62,14 +62,14 @@ modelViewerVariants.addEventListener('load', () => {
   // Adds a default option.
 
 });
-</script>
-<script>
+
 select.addEventListener('input', (event) => {
   modelViewerVariants.variantName = event.target.value === 'default' ? null : event.target.value;
 });
-
+</script> 
+<script>
 const modelViewerVariants = document.querySelector("model-viewer#hako");
-const select = document.querySelector('#variant');
+const select = document.querySelector('#variant2');
 
 modelViewerVariants.addEventListener('load', () => {
   const names = modelViewerVariants.availableVariants;
